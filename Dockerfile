@@ -19,8 +19,8 @@ COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
 # Set environment variables
-# Rsync options to set for operation
-ENV RSYNC_OPTIONS=""
+# Rsync options to set for operation, by default performs dry run only
+ENV RSYNC_OPTIONS="-rnv"
 
 # Frequency in seconds when rsync will be run on the folders
 ENV SYNC_FREQUENCY="300"
