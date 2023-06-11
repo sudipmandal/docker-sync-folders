@@ -18,5 +18,12 @@ COPY entrypoint.sh /
 # Make the script executable
 RUN chmod +x /entrypoint.sh
 
+# Set environment variables
+# Rsync options to set for operation
+ENV RSYNC_OPTIONS=""
+
+# Frequency in seconds when rsync will be run on the folders
+ENV SYNC_FREQUENCY="300"
+
 # Set the script as the entry point
 ENTRYPOINT ["/entrypoint.sh"]
