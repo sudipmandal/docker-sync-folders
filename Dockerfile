@@ -25,5 +25,8 @@ ENV RSYNC_OPTIONS=""
 # Frequency in seconds when rsync will be run on the folders
 ENV SYNC_FREQUENCY="300"
 
+# Run as root user to prevent file access issues
+USER root
+
 # Set the script as the entry point
 ENTRYPOINT ["/entrypoint.sh"]
