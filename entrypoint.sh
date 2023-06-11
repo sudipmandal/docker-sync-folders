@@ -20,7 +20,7 @@ fi
 
 # Call rsync with rsync_options as a parameter
 while true; do
-  rsync $rsync_options
+  rsync $rsync_options /source/ /destination
   
   # Sleep for sync_frequency seconds before running rsync again
   sleep "$sync_frequency"
