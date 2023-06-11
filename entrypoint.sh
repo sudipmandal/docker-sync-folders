@@ -20,7 +20,9 @@ fi
 
 # Call rsync with rsync_options as a parameter
 while true; do
+  echo "Starting Sync.."
   rsync $rsync_options /source/ /destination
+  echo "Sync Complete"
   
   # Sleep for sync_frequency seconds before running rsync again
   sleep "$sync_frequency"
